@@ -5,15 +5,20 @@ import sys
 from matplotlib import pyplot as plt 
 import random
 import matplotlib
+
+#设置中文字体
 plt.rcParams['font.sans-serif'] = ['SimHei']   
 plt.rcParams['font.family']='sans-serif' 
 plt.rcParams['axes.unicode_minus'] = False
 
+
+# 随机生成RGB颜色
 def random_color():
     l = ["1","2","3","4",'5','6','7','8','9','0','A','B','C','D','E','F']
     slice = random.sample(l, 6)
     return "#"+"".join(slice)
 
+# 生成图片
 def make_pic(file_in, types):
     f = open(file_in)
     lines = f.readlines()
